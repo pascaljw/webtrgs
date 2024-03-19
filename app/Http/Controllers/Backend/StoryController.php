@@ -11,11 +11,12 @@ class StoryController extends Controller
     public function index()
     {
         $story = Program::whereNotNull('story')->first();
-        if ($story) {
-            return view('back.program.story.index', compact('story'));
-        } else {
-            return view('back.program.story.nostory');
-        }
+        // if ($story) {
+        //     return view('back.program.story.index', compact('story'));
+        // } else {
+        //     return view('back.program.story.nostory');
+        // }
+        return view('back.program.story.nostory');
     }
 
     public function create()

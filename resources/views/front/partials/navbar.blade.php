@@ -1,34 +1,24 @@
 <nav id="navmenu" class="navmenu">
     <ul>
-      <li><a href="index.html#hero" class="active">Home</a></li>
+      <li><a href="{{ route('site.beranda')}}" class="active">Beranda</a></li>
       <li class="dropdown has-dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
         <ul class="dd-box-shadow">
           <li><a href="#">Visi Misi</a></li>
-          <li><a href="#">Struktur Organisasi</a></li>
-          <li><a href="#">Dropdown 3</a></li>
-          <li><a href="#">Dropdown 4</a></li>
+          <li><a href="#">Data Dosen</a></li>
+          <li><a href="#">Data PLP&Admin</a></li>
+          <li><a href="#">Akreditasi</a></li>
         </ul>
       </li>
-      <li><a href="index.html#services">Services</a></li>
-      <li><a href="index.html#portfolio">Portfolio</a></li>
-      <li><a href="index.html#team">Team</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li class="dropdown has-dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down"></i></a>
+      <li><a href="{{ route('site.blogs')}}">Pengumuman</a></li>
+      <li class="dropdown has-dropdown"><a href="#"><span>Repositori</span> <i class="bi bi-chevron-down"></i></a>
         <ul class="dd-box-shadow">
-          <li><a href="#">Dropdown 1</a></li>
-          <li class="dropdown has-dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down"></i></a>
-            <ul class="dd-box-shadow">
-              <li><a href="#">Deep Dropdown 1</a></li>
-              <li><a href="#">Deep Dropdown 2</a></li>
-              <li><a href="#">Deep Dropdown 3</a></li>
-              <li><a href="#">Deep Dropdown 4</a></li>
-              <li><a href="#">Deep Dropdown 5</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Dropdown 2</a></li>
-          <li><a href="#">Dropdown 3</a></li>
-          <li><a href="#">Dropdown 4</a></li>
-        </ul>
+          <li><a href="#">Data Skripsi</a></li>
+          </ul>
+      <li class="dropdown has-dropdown"><a href="#"><span>Unit Pendukung</span> <i class="bi bi-chevron-down"></i></a>
+        <ul class="dd-box-shadow">
+          <li><a href="#">Laboratorium</a></li>
+          <li><a href="#">Organisasi Mahasiswa</a></li>
+          </ul>
       </li>
       <li><a href="index.html#contact">Contact</a></li>
     </ul>

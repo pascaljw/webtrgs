@@ -23,11 +23,11 @@
                 <span class="nav-text">Profil</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="{{ route('story') }}">Selayang Pandang</a></li>
-                    <li><a href="{{ route('vision') }}">Visi Misi</a></li>
-                    <li><a href="{{ route('structure') }}">Struktur Organisasi</a></li>
-                    <li><a href="{{ route('team') }}">Tim Dosen dan Tendik</a></li>
-                    <li><a href="{{ route('partner') }}">Kerjasama</a></li>
+                    <li><a href="{{ route('story') }}">Visi Misi</a></li>
+                    <li><a href="{{ route('vision') }}">Data Dosen</a></li>
+                    <li><a href="{{ route('structure') }}">Data PLP&Admin</a></li>
+                    {{-- <li><a href="{{ route('team') }}">Tim Dosen dan Tendik</a></li> --}}
+                    {{-- <li><a href="{{ route('partner') }}">Akriditasi</a></li> --}}
                     <li><a href="{{ route('acreditation') }}">Akreditasi</a></li>
                 </ul>
             </li>

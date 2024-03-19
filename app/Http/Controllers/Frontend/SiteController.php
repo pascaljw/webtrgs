@@ -33,7 +33,8 @@ class SiteController extends Controller
         // $cat_id = Category::where('slug', 'pengumuman')->first();
         // $sliders = Slider::orderBy('created_at', 'desc')->get();
         // $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get();
-        return view('frontend.partials.master');
+        $story = Program::all();
+        return view('frontend.index', compact('story'));
     }
 
     public function contact()
@@ -88,7 +89,7 @@ class SiteController extends Controller
     {
         $categories = Category::all();
         $blogs = Blog::orderBy('created_at', 'desc')->paginate(4);
-        return view('front.blogs', compact('blogs', 'categories'));
+        return view('Frontend.blogs.index', compact('blogs', 'categories'));
     }
 
     public function blogDetail($slug)

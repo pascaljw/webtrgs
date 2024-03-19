@@ -21,6 +21,7 @@ Auth::routes([
 ]);
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/user', [App\Http\Controllers\Backend\UserController::class, 'index'])->name('user');
+    
     Route::get('/admin/user/data', [App\Http\Controllers\Backend\UserController::class, 'datatable'])->name('user.data');
     Route::get('/admin/user/create', [App\Http\Controllers\Backend\UserController::class, 'create'])->name('user.create');
     Route::post('/admin/user/store', [App\Http\Controllers\Backend\UserController::class, 'store'])->name('user.store');
