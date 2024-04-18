@@ -3,11 +3,10 @@
       <li><a href="{{ route('site.beranda')}}" class="active">Beranda</a></li>
       <li class="dropdown has-dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
         <ul class="dd-box-shadow">
-          <li><a href="#visi_misi">Visi Misi</a></li>
-          <li><a href="#berita">Berita</a></li>
-          <li><a href="#data_dosen">Data Dosen</a></li>
-          <li><a href="#data_plp">Data PLP&Admin</a></li>
-          <li><a href="#akreditasi">Akreditasi</a></li>
+          <li><a href="{{route('site.visi_misi')}}">Visi Misi</a></li>
+          <li><a href="{{route('site.berita')}}">Berita</a></li>
+          <li><a href="{{route('site.data_dosen')}}">Data Dosen PLN Admin</a></li>
+          <li><a href="{{route('site.akreditasi')}}">Akreditasi</a></li>
         </ul>
       </li>
       <li><a href="{{ route('site.blogs')}}">Pengumuman</a></li>

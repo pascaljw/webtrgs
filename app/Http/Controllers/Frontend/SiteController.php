@@ -29,12 +29,50 @@ use Illuminate\Http\Request;
 class SiteController extends Controller
 {
     public function index()
+    
     {
         // $cat_id = Category::where('slug', 'pengumuman')->first();
         // $sliders = Slider::orderBy('created_at', 'desc')->get();
         // $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get();
+        $dosens = Team::all();
+        $contact = Contact::first();
         $story = Program::all();
-        return view('frontend.index', compact('story'));
+        return view('frontend.index', compact('story','contact','dosens'));
+    }
+    
+    public function visi_misi()
+    {
+        $dosens = Team::all();
+        $contact = Contact::first();
+        $story = Program::all();
+        return redirect()->route('site.beranda', ['#visi_misi'])->with(compact('story', 'contact', 'dosens'));
+    }
+
+    public function berita()
+    {
+        $dosens = Team::all();
+        $contact = Contact::first();
+        $story = Program::all();
+        return redirect()->route('site.beranda', ['#berita'])->with(compact('story', 'contact', 'dosens'));
+    }
+    public function data_dosen()
+    {
+        $dosens = Team::all();
+        $contact = Contact::first();
+        $story = Program::all();
+        return redirect()->route('site.beranda', ['#data_dosen'])->with(compact('story', 'contact', 'dosens'));
+    }
+
+    public function akreditasi()
+    {
+        $dosens = Team::all();
+        $contact = Contact::first();
+        $story = Program::all();
+        return redirect()->route('site.beranda', ['#akreditasi'])->with(compact('story', 'contact', 'dosens'));
+    }
+    public function repo()
+    {
+        return view('frontend.repo.repo');
     }
 
     public function contact()

@@ -87,7 +87,21 @@ h6 {
   z-index: 997;
 }
 
+.header-content {
+  --background-color: #ffffff;
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 15px 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+
 .header .logo img {
+  max-height: 40px;
+  margin-right: 6px;
+}
+
+.header-content .logo img {
   max-height: 40px;
   margin-right: 6px;
 }

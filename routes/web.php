@@ -198,6 +198,12 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 Route::get('/', [SiteController::class, 'index'])->name('site.beranda');
+Route::get('/visi-misi', [SiteController::class, 'visi_misi'])->name('site.visi_misi');
+Route::get('/berita', [SiteController::class, 'berita'])->name('site.berita');
+Route::get('/data-dosen', [SiteController::class, 'data_dosen'])->name('site.data_dosen');
+Route::get('/akreditasi', [SiteController::class, 'akreditasi'])->name('site.akreditasi');
+Route::get('/repo', [SiteController::class, 'repo'])->name('site.repo');
+
 Route::get('/curriculum', [SiteController::class, 'curriculum'])->name('site.curriculum');
 Route::get('/documents', [SiteController::class, 'documents'])->name('site.documents');
 Route::get('/documents/data', [App\Http\Controllers\Frontend\SiteController::class, 'datatables'])->name('site.documents.data');

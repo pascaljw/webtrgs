@@ -153,11 +153,11 @@
   
           <div class="row gy-4">
   
+            @forelse ($story as $item)
             <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="100">
               <div class="service-item d-flex">
                 <div class="icon flex-shrink-0"></div>
-                  @forelse ($story as $item)
-                      @php
+                @php
                           // Extracting the title from the provided HTML structure
                           $titleStart = strpos($item->story, '<p>'); // Find the first occurrence of <p>
                           $titleEnd = strpos($item->story, '</p>', $titleStart); // Find the corresponding </p>
@@ -175,21 +175,21 @@
                           <h4 class="title"><a href="services-details.html" class="stretched-link">{{ $title }}</a></h4>
                           <p class="description">{!! $contentAfterP !!}</p>
                       </div>
-                  @empty
                       <!-- Handle empty state -->
+                    </div>
+                  </div>
+                  @empty
                   @endforelse
-              </div>
-              </div>
             <!-- End Service Item -->
   
-            <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
+            {{-- <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
               <div class="service-item d-flex">
                 <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
                 <div>
                   <h4 class="title"><a href="services-details.html" class="stretched-link">Visi</a></h4>
                   <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
                 </div>
-              </div>
+              </div> --}}
             </div><!-- End Service Item -->
           </div>
   
@@ -512,17 +512,19 @@
   
         <!--  Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Dosen</h2>
-          <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+          <h2>Dosen, PLP, Admin</h2>
+          {{-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> --}}
         </div><!-- End Section Title -->
   
         <div class="container">
-  
+          
           <div class="row gy-5">
-  
+            
+            @foreach($dosens as $dosen )
             <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+                
               <div class="member-img">
-                <img src="{{ asset('frontend/assets/img/team/team-1.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ $dosen->getImage() }}" class="img-fluid" alt="">
                 <div class="social">
                   <a href="#"><i class="bi bi-twitter"></i></a>
                   <a href="#"><i class="bi bi-facebook"></i></a>
@@ -531,96 +533,15 @@
                 </div>
               </div>
               <div class="member-info text-center">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <h4>{{$dosen->name}}</h4>
+                <span>{{$dosen->position}}</span>
                 <p>Aliquam iure quaerat voluptatem praesentium possimus unde laudantium vel dolorum distinctio dire flow</p>
               </div>
             </div><!-- End Team Member -->
+            @endforeach
   
-            <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
-              <div class="member-img">
-                <img src="{{ asset('frontend/assets/img/team/team-2.jpg') }}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="#"><i class="bi bi-twitter"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info text-center">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-                <p>Labore ipsam sit consequatur exercitationem rerum laboriosam laudantium aut quod dolores exercitationem ut</p>
-              </div>
-            </div><!-- End Team Member -->
-  
-            <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="{{ asset('frontend/assets/img/team/team-3.jpg') }}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="#"><i class="bi bi-twitter"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info text-center">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <p>Illum minima ea autem doloremque ipsum quidem quas aspernatur modi ut praesentium vel tque sed facilis at qui</p>
-              </div>
-            </div><!-- End Team Member -->
-  
-            <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
-              <div class="member-img">
-                <img src="{{ asset('frontend/assets/img/team/team-4.jpg') }}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="#"><i class="bi bi-twitter"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info text-center">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-                <p>Magni voluptatem accusamus assumenda cum nisi aut qui dolorem voluptate sed et veniam quasi quam consectetur</p>
-              </div>
-            </div><!-- End Team Member -->
-  
-            <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
-              <div class="member-img">
-                <img src="{{ asset('frontend/assets/img/team/team-5.jpg') }}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="#"><i class="bi bi-twitter"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info text-center">
-                <h4>Brian Doe</h4>
-                <span>Marketing</span>
-                <p>Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus quia impedit laborum velit</p>
-              </div>
-            </div><!-- End Team Member -->
-  
-            <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
-              <div class="member-img">
-                <img src="{{ asset('frontend/assets/img/team/team-6.jpg') }}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="#"><i class="bi bi-twitter"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info text-center">
-                <h4>Josepha Palas</h4>
-                <span>Operation</span>
-                <p>Sint sint eveniet explicabo amet consequatur nesciunt error enim rerum earum et omnis fugit eligendi cupiditate vel</p>
-              </div>
-            </div><!-- End Team Member -->
+            
+            
   
           </div>
   
@@ -628,125 +549,7 @@
   
       </section><!-- End Team Section -->
 
-      <section id="data_plp" class="team">
-  
-        <!--  Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>PLP&Admin</h2>
-          {{-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> --}}
-        </div><!-- End Section Title -->
-  
-        <div class="container">
-  
-          <div class="row gy-5">
-  
-            <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="{{ asset('frontend/assets/img/team/team-1.jpg') }}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="#"><i class="bi bi-twitter"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info text-center">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <p>Aliquam iure quaerat voluptatem praesentium possimus unde laudantium vel dolorum distinctio dire flow</p>
-              </div>
-            </div><!-- End Team Member -->
-  
-            <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
-              <div class="member-img">
-                <img src="{{ asset('frontend/assets/img/team/team-2.jpg') }}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="#"><i class="bi bi-twitter"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info text-center">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-                <p>Labore ipsam sit consequatur exercitationem rerum laboriosam laudantium aut quod dolores exercitationem ut</p>
-              </div>
-            </div><!-- End Team Member -->
-  
-            <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="{{ asset('frontend/assets/img/team/team-3.jpg') }}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="#"><i class="bi bi-twitter"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info text-center">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <p>Illum minima ea autem doloremque ipsum quidem quas aspernatur modi ut praesentium vel tque sed facilis at qui</p>
-              </div>
-            </div><!-- End Team Member -->
-  
-            <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
-              <div class="member-img">
-                <img src="{{ asset('frontend/assets/img/team/team-4.jpg') }}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="#"><i class="bi bi-twitter"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info text-center">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-                <p>Magni voluptatem accusamus assumenda cum nisi aut qui dolorem voluptate sed et veniam quasi quam consectetur</p>
-              </div>
-            </div><!-- End Team Member -->
-  
-            <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
-              <div class="member-img">
-                <img src="{{ asset('frontend/assets/img/team/team-5.jpg') }}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="#"><i class="bi bi-twitter"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info text-center">
-                <h4>Brian Doe</h4>
-                <span>Marketing</span>
-                <p>Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus quia impedit laborum velit</p>
-              </div>
-            </div><!-- End Team Member -->
-  
-            <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
-              <div class="member-img">
-                <img src="{{ asset('frontend/assets/img/team/team-6.jpg') }}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="#"><i class="bi bi-twitter"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info text-center">
-                <h4>Josepha Palas</h4>
-                <span>Operation</span>
-                <p>Sint sint eveniet explicabo amet consequatur nesciunt error enim rerum earum et omnis fugit eligendi cupiditate vel</p>
-              </div>
-            </div><!-- End Team Member -->
-  
-          </div>
-  
-        </div>
-  
-      </section>
+      
   
       <!-- Call-to-action Section - Home Page -->
       {{-- <section id="call-to-action" class="call-to-action">
@@ -1031,8 +834,8 @@
                   <div class="info-item" data-aos="fade" data-aos-delay="200">
                     <i class="bi bi-geo-alt"></i>
                     <h3>Address</h3>
-                    <p>A108 Adam Street</p>
-                    <p>New York, NY 535022</p>
+                    <p>{!!$contact->address!!}</p>
+                    {{-- <p>New York, NY 535022</p> --}}
                   </div>
                 </div><!-- End Info Item -->
   
@@ -1040,8 +843,7 @@
                   <div class="info-item" data-aos="fade" data-aos-delay="300">
                     <i class="bi bi-telephone"></i>
                     <h3>Call Us</h3>
-                    <p>+1 5589 55488 55</p>
-                    <p>+1 6678 254445 41</p>
+                    <p>{!!$contact->phone!!}</p>
                   </div>
                 </div><!-- End Info Item -->
   
@@ -1049,8 +851,7 @@
                   <div class="info-item" data-aos="fade" data-aos-delay="400">
                     <i class="bi bi-envelope"></i>
                     <h3>Email Us</h3>
-                    <p>info@example.com</p>
-                    <p>contact@example.com</p>
+                    <p>{!!$contact->email!!}</p>
                   </div>
                 </div><!-- End Info Item -->
   

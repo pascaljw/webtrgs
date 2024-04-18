@@ -1,6 +1,6 @@
 @extends('front.partials.master')
 @section('breadcrumb')
-  @include('front.partials.breadcrumb')
+@include('front.partials.breadcrumb')
 @endsection
 
 @section('content')
