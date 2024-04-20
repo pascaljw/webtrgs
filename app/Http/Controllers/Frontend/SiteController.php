@@ -11,6 +11,7 @@ use App\Models\Contact;
 use App\Models\Curriculum;
 use App\Models\Document;
 use App\Models\Faq;
+use App\Models\Thesis;
 use App\Models\Filter;
 use App\Models\Gallery;
 use App\Models\Graduation;
@@ -29,7 +30,7 @@ use Illuminate\Http\Request;
 class SiteController extends Controller
 {
     public function index()
-    
+
     {
         // $cat_id = Category::where('slug', 'pengumuman')->first();
         // $sliders = Slider::orderBy('created_at', 'desc')->get();
@@ -37,9 +38,10 @@ class SiteController extends Controller
         $dosens = Team::all();
         $contact = Contact::first();
         $story = Program::all();
-        return view('frontend.index', compact('story','contact','dosens'));
+        $akreditasi = Program::whereNotNull('acreditation')->first();
+        return view('frontend.index', compact('story','contact','dosens','akreditasi'));
     }
-    
+
     public function visi_misi()
     {
         $dosens = Team::all();
@@ -72,7 +74,8 @@ class SiteController extends Controller
     }
     public function repo()
     {
-        return view('frontend.repo.repo');
+        $theses = Thesis::orderBy('name', 'asc')->paginate(100);
+        return view('frontend.repo.repo', compact('theses'));
     }
 
     public function contact()
@@ -126,8 +129,8 @@ class SiteController extends Controller
     public function blogs()
     {
         $categories = Category::all();
-        $blogs = Blog::orderBy('created_at', 'desc')->paginate(4);
-        return view('Frontend.blogs.index', compact('blogs', 'categories'));
+        $announcements = Announcement::orderBy('created_at', 'desc')->paginate(5);
+        return view('frontend.blogs.index', compact('categories','announcements'));
     }
 
     public function blogDetail($slug)

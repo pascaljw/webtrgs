@@ -25,7 +25,6 @@ class BlogController extends Controller
 
     public function store(Request $request)
     {
-        // dd($request);
         $request->validate([
             'name'          => 'required|min:3',
             'content'       => 'required',

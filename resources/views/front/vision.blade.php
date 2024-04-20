@@ -11,7 +11,7 @@
             @include('front.partials.quickmenu')
             <div class="col-lg-9 col-md-6">
                 <article class="entry">
-                    @if($vision == null) 
+                    @if($vision == null)
                         <div class="entry-content">
                             <p>Belum ada data yang dapat ditampilkan</p>
                         </div>
