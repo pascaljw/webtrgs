@@ -235,4 +235,6 @@ Route::get('/announcement', [App\Http\Controllers\Frontend\SiteController::class
 Route::get('/blogs', [App\Http\Controllers\Frontend\SiteController::class, 'blogs'])->name('site.blogs');
 Route::get('/blogs/category/{id}', [App\Http\Controllers\Frontend\SiteController::class, 'blogFilterCategory'])->name('site.blogFilterCategory');
 Route::get('/announcement/show/{slug}', [App\Http\Controllers\Frontend\SiteController::class, 'announcementDetail'])->name('site.announcementDetail');
+Route::get('/laboratorium', [App\Http\Controllers\Frontend\SiteController::class, 'laboratorium'])->name('site.laboratorium');
+
 Route::get('/{slug}', [App\Http\Controllers\Frontend\SiteController::class, 'blogDetail'])->name('site.blogDetail');

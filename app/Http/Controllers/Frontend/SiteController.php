@@ -176,6 +176,12 @@ class SiteController extends Controller
         $anothers = Announcement::orderBy('created_at', 'desc')->where('id', '!=', $announcement->id)->take(5)->get();
         return view('frontend.pengumuman.show', compact('announcement', 'anothers'));
     }
+    public function laboratorium()
+    {
+        $gallerys = Gallery::all();
+        $filters = Filter::all();
+        return view('frontend.laboratorium.index', compact('gallerys','filters'));
+    }
 
     public function job()
     {
