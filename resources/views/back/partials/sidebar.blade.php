@@ -23,11 +23,11 @@
                 <span class="nav-text">Profil</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="{{ route('story') }}">Visi Misi</a></li>
-                    <li><a href="{{ route('vision') }}">Data Dosen</a></li>
-                    <li><a href="{{ route('structure') }}">Data PLP&Admin</a></li>
-                    <li><a href="{{ route('team') }}">Tim Dosen dan Tendik</a></li>
-                    <li><a href="{{ route('partner') }}">Akriditasi</a></li>
+                    <li><a href="{{ route('story') }}">cerita</a></li>
+                    <li><a href="{{ route('vision') }}">visi misi</a></li>
+                    <li><a href="{{ route('structure') }}">struktur</a></li>
+                    <li><a href="{{ route('team') }}">Data Dosen Dan PLP&Admin</a></li>
+                    <li><a href="{{ route('partner') }}">partner</a></li>
                     <li><a href="{{ route('acreditation') }}">Akreditasi</a></li>
                 </ul>
             </li>
