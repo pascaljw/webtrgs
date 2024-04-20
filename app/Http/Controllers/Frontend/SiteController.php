@@ -34,12 +34,12 @@ class SiteController extends Controller
     {
         // $cat_id = Category::where('slug', 'pengumuman')->first();
         // $sliders = Slider::orderBy('created_at', 'desc')->get();
-        // $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get();
+        $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get();
         $dosens = Team::all();
         $contact = Contact::first();
         $story = Program::all();
         $akreditasi = Program::whereNotNull('acreditation')->first();
-        return view('frontend.index', compact('story','contact','dosens','akreditasi'));
+        return view('frontend.index', compact('story','contact','dosens','akreditasi','blogs'));
     }
 
     public function visi_misi()
