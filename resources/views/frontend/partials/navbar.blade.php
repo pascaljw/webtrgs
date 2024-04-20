@@ -10,7 +10,7 @@
           <li><a href="#akreditasi">Akreditasi</a></li>
         </ul>
       </li>
-      <li><a href="{{ route('site.blogs')}}">Pengumuman</a></li>
+      <li><a href="{{ route('site.announcement')}}">Pengumuman</a></li>
       <li class="dropdown has-dropdown"><a href="#"><span>Repositori</span> <i class="bi bi-chevron-down"></i></a>
         <ul class="dd-box-shadow">
           <li><a href="{{route('site.repo')}}">Data Skripsi</a></li>

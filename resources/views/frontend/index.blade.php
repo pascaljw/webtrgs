@@ -255,7 +255,7 @@
                     </div>
 
                     <h2 class="title">
-                        <a href="blog-details.html">{{ $an->name }}</a>
+                        <a href="{{ route('site.berita.show', $an->slug) }}">{{ $an->name }}</a>
                     </h2>
 
                     <div class="d-flex align-items-center">

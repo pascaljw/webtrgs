@@ -21,7 +21,7 @@ Auth::routes([
 ]);
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/user', [App\Http\Controllers\Backend\UserController::class, 'index'])->name('user');
-    
+
     Route::get('/admin/user/data', [App\Http\Controllers\Backend\UserController::class, 'datatable'])->name('user.data');
     Route::get('/admin/user/create', [App\Http\Controllers\Backend\UserController::class, 'create'])->name('user.create');
     Route::post('/admin/user/store', [App\Http\Controllers\Backend\UserController::class, 'store'])->name('user.store');
@@ -200,6 +200,8 @@ Route::group(['middleware' => ['auth']], function () {
 Route::get('/', [SiteController::class, 'index'])->name('site.beranda');
 Route::get('/visi-misi', [SiteController::class, 'visi_misi'])->name('site.visi_misi');
 Route::get('/berita', [SiteController::class, 'berita'])->name('site.berita');
+Route::get('/berita/show/{slug}', [SiteController::class, 'berita_show'])->name('site.berita.show');
+
 Route::get('/data-dosen', [SiteController::class, 'data_dosen'])->name('site.data_dosen');
 Route::get('/akreditasi', [SiteController::class, 'akreditasi'])->name('site.akreditasi');
 Route::get('/repo', [SiteController::class, 'repo'])->name('site.repo');
@@ -232,5 +234,5 @@ Route::get('/galleries', [App\Http\Controllers\Frontend\SiteController::class, '
 Route::get('/announcement', [App\Http\Controllers\Frontend\SiteController::class, 'announcement'])->name('site.announcement');
 Route::get('/blogs', [App\Http\Controllers\Frontend\SiteController::class, 'blogs'])->name('site.blogs');
 Route::get('/blogs/category/{id}', [App\Http\Controllers\Frontend\SiteController::class, 'blogFilterCategory'])->name('site.blogFilterCategory');
-Route::get('/announcement/{slug}', [App\Http\Controllers\Frontend\SiteController::class, 'announcementDetail'])->name('site.announcementDetail');
+Route::get('/announcement/show/{slug}', [App\Http\Controllers\Frontend\SiteController::class, 'announcementDetail'])->name('site.announcementDetail');
 Route::get('/{slug}', [App\Http\Controllers\Frontend\SiteController::class, 'blogDetail'])->name('site.blogDetail');

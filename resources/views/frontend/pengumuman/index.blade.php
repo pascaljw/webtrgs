@@ -20,7 +20,7 @@
                     </div>
 
                     <h2 class="title">
-                        <a href="{{ route('site.berita.show', $an->slug) }}">{{ $an->name }}</a>
+                        <a href="{{ route('site.announcementDetail', $an->slug) }}">{{ $an->name }}</a>
                     </h2>
 
                     <div class="d-flex align-items-center">

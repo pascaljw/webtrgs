@@ -12,8 +12,8 @@
                 <article class="article">
 
                     <div class="post-img">
-                        @if($berita->images != null)
-                        @foreach (explode(' ', $berita->images) as $images)
+                        @if($announcement->images != null)
+                        @foreach (explode(' ', $announcement->images) as $images)
                           <div class="item mt-2">
                               <img src="{{ asset('storage/'.$images) }}" class="img-fluid">
                           </div>
@@ -22,12 +22,12 @@
                         {{-- <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid"> --}}
                     </div>
 
-                    <h2 class="title">{{ $berita->name }}</h2>
+                    <h2 class="title">{{ $announcement->name }}</h2>
 
 
                     <div class="content">
                         <p>
-                            {!! $berita->content !!}
+                            {!! $announcement->content !!}
                         </p>
                     </div><!-- End post content -->
                     {{-- <div class="blog-author d-flex align-items-center">

@@ -57,6 +57,11 @@ class SiteController extends Controller
         $story = Program::all();
         return redirect()->route('site.beranda', ['#berita'])->with(compact('story', 'contact', 'dosens'));
     }
+    public function berita_show($slug)
+    {
+        $berita = Blog::where('slug', $slug)->firstOrFail();
+        return view('frontend.blogs.show', compact('berita'));
+    }
     public function data_dosen()
     {
         $dosens = Team::all();
@@ -132,7 +137,12 @@ class SiteController extends Controller
         $announcements = Announcement::orderBy('created_at', 'desc')->paginate(5);
         return view('frontend.blogs.index', compact('categories','announcements'));
     }
+    public function pengumuman_show($slug)
+    {
+        $announcement = Announcement::where('slug', $slug)->firstOrFail();
+        return view('front.blogDetail', compact('announcement'));
 
+    }
     public function blogDetail($slug)
     {
         $categories = Category::all();
@@ -157,14 +167,14 @@ class SiteController extends Controller
     public function announcement()
     {
         $announcements = Announcement::orderBy('created_at', 'desc')->paginate(5);
-        return view('front.announcement', compact('announcements'));
+        return view('frontend.pengumuman.index', compact('announcements'));
     }
 
     public function announcementDetail($slug)
     {
         $announcement = Announcement::where('slug', '=', $slug)->first();
         $anothers = Announcement::orderBy('created_at', 'desc')->where('id', '!=', $announcement->id)->take(5)->get();
-        return view('front.announcementDetail', compact('announcement', 'anothers'));
+        return view('frontend.pengumuman.show', compact('announcement', 'anothers'));
     }
 
     public function job()
