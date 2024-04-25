@@ -50,4 +50,30 @@ class ThesesController extends Controller
             ->addIndexColumn()
             ->toJson();
     }
+
+    public function edit($id)
+    {
+        
+        $theses = Thesis::find($id);
+        return view('back.theses.edit',compact('theses'));
+
+        // return datatables()->of($theses)
+    }
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'name'  => 'required|min:3',
+            'nim'   => 'required|numeric',
+            'title' => 'required',
+            'year'  => 'required',
+        ]);
+
+        $theses = Thesis::where('id', $id)->firstOrFail();
+        $theses->update($request->all());
+
+        return redirect()->route('theses');
+        
+
+
+    }
 }

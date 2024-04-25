@@ -17,7 +17,7 @@
       <li class="dropdown has-dropdown"><a href="#"><span>Unit Pendukung</span> <i class="bi bi-chevron-down"></i></a>
         <ul class="dd-box-shadow">
           <li><a href="#">Laboratorium</a></li>
-          <li><a href="#">Organisasi Mahasiswa</a></li>
+          {{-- <li><a href="#">Organisasi Mahasiswa</a></li> --}}
           </ul>
       </li>
       <li><a href="index.html#contact">Contact</a></li>

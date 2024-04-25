@@ -1,6 +1,9 @@
-@extends('frontend.partials.content')
+@extends('frontend.partials.content ')
 @section('content')
+
+
 <div class="container table-responsive mt-5 pt-5">
+    <h1 class="text-center mb-5">Data Skripsi</h1>
     <table class="table table-striped text-center">
     <thead>
         <tr>

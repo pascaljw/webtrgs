@@ -1,4 +1,4 @@
-@extends('frontend.partials.app')
+@extends('frontend.partials.content')
 
 @section('content')
 @include('frontend.partials.hero')
@@ -40,7 +40,7 @@
 </section><!-- End Clients Section --> --}}
 
 <!-- About Section - Home Page -->
-<section id="about" class="about">
+<section id="about" class="about mt-5">
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row align-items-xl-center gy-5">

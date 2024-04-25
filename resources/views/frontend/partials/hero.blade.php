@@ -1,4 +1,4 @@
-<section id="hero" class="hero">
+<section id="hero" class="hero mt-5" >
 
     <img src="{{ asset('frontend/selamat-datang.png')}}" alt="" data-aos="fade-in">
 

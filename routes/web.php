@@ -189,6 +189,8 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/admin/theses', [App\Http\Controllers\Backend\ThesesController::class, 'index'])->name('theses');
     Route::get('/admin/theses/create', [App\Http\Controllers\Backend\ThesesController::class, 'create'])->name('theses.create');
+    Route::get('/admin/theses/{id}/edit', [App\Http\Controllers\Backend\ThesesController::class, 'edit'])->name('theses.edit');
+    Route::put('/admin/theses/{id}/update', [App\Http\Controllers\Backend\ThesesController::class, 'update'])->name('theses.update');
     Route::post('/admin/theses/store', [App\Http\Controllers\Backend\ThesesController::class, 'store'])->name('theses.store');
     Route::get('/admin/theses/data', [App\Http\Controllers\Backend\ThesesController::class, 'datatable'])->name('theses.data');
 

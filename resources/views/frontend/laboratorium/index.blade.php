@@ -1,8 +1,8 @@
-@extends('frontend.partials.app')
+@extends('frontend.partials.content')
 
 @section('content')
 <!-- Portfolio Section - Home Page -->
-<section id="portfolio" class="portfolio">
+<section id="portfolio" class="portfolio mt-5">
 
     <!--  Section Title -->
     <div class="container section-title" data-aos="fade-up">

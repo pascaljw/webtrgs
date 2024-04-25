@@ -1,9 +1,9 @@
-@extends('frontend.partials.app')
+@extends('frontend.partials.content')
 
 @section('content')
 
 <!-- Blog Section - Blog Page -->
-<section id="blog" class="blog">
+<section id="blog" class="blog mt-5">
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
 

@@ -19,7 +19,7 @@
       </a>
 
       <!-- Nav Menu -->
-      @include('frontend.partials.navbar-content')
+      @include('frontend.partials.navbar')
 
       {{-- <a class="btn-getstarted" href="index.html#about">Get Started</a> --}}
 
