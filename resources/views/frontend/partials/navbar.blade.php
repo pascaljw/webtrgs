@@ -5,7 +5,7 @@
         <ul class="dd-box-shadow">
           <li><a href="{{route('site.visi_misi')}}">Visi Misi</a></li>
           <li><a href="{{route('site.berita')}}">Berita</a></li>
-          <li><a href="{{route('site.data_dosen')}}">Data Dosen PLN Admin</a></li>
+          <li><a href="{{route('site.data_dosen')}}">Data Dosen PLP Admin</a></li>
           <li><a href="{{route('site.akreditasi')}}">Akreditasi</a></li>
         </ul>
       </li>
@@ -17,7 +17,7 @@
       <li class="dropdown has-dropdown"><a href="#"><span>Unit Pendukung</span> <i class="bi bi-chevron-down"></i></a>
         <ul class="dd-box-shadow">
           <li><a href="{{route('site.laboratorium')}}">Laboratorium</a></li>
-          <li><a href="#">Organisasi Mahasiswa</a></li>
+          {{-- <li><a href="#">Organisasi Mahasiswa</a></li> --}}
           </ul>
       </li>
       <li><a href="contact">Contact</a></li>

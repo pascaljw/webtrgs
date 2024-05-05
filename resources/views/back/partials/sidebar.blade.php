@@ -6,7 +6,7 @@
         <ul class="metismenu" id="menu">
             <li><a href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-046-home"></i>
-                    <span class="nav-text">Dashboard</span>
+                    <span class="nav-text">Dashboard  X</i></span>
                 </a>
             </li>
             <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
@@ -20,7 +20,7 @@
             
             <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                 <i class="flaticon-021-command"></i>
-                <span class="nav-text">Profil</span>
+                <span class="nav-text">Profile</span>
                 </a>
                 <ul aria-expanded="false">
                     <li><a href="{{ route('story') }}">cerita</a></li>

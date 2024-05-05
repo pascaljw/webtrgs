@@ -24,6 +24,7 @@ use App\Models\Repository;
 use App\Models\Research;
 use App\Models\Scholarship;
 use App\Models\Slider;
+use App\Models\Hero;
 use App\Models\Team;
 use Illuminate\Http\Request;
 
@@ -34,12 +35,13 @@ class SiteController extends Controller
     {
         // $cat_id = Category::where('slug', 'pengumuman')->first();
         // $sliders = Slider::orderBy('created_at', 'desc')->get();
+        $hero = Hero::all();
         $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get();
         $dosens = Team::all();
         $contact = Contact::first();
         $story = Program::all();
         $akreditasi = Program::whereNotNull('acreditation')->first();
-        return view('frontend.index', compact('story','contact','dosens','akreditasi','blogs'));
+        return view('frontend.index', compact('hero','story','contact','dosens','akreditasi','blogs'));
     }
 
     public function visi_misi()

@@ -1,6 +1,8 @@
+@foreach ($hero as $h)
+    
 <section id="hero" class="hero mt-5" >
 
-    <img src="{{ asset('frontend/selamat-datang.png')}}" alt="" data-aos="fade-in">
+  <img src="{{ asset('storage/'.$h->image)}}" alt="" data-aos="fade-in">
 
     <div class="container">
       <div class="row">
@@ -17,4 +19,5 @@
       </div>
     </div>
 
-</section><!-- End Hero Section -->
+  </section><!-- End Hero Section -->
+  @endforeach

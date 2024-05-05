@@ -1,4 +1,4 @@
-@extends('frontend.partials.app')
+@extends('frontend.partials.content')
 
 @section('content')
 <section id="blog-details" class="blog-details">
