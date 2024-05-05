@@ -12,12 +12,12 @@
 	<meta property="og:description" content="Jobick : Job Admin Bootstrap 5 Template" />
 	<meta property="og:image" content="https://jobick.dexignlab.com/xhtml/social-image.png" />
 	<meta name="format-detection" content="telephone=no">
-	
+
 	<!-- PAGE TITLE HERE -->
 	<title>Jobick Job Admin</title>
-	
+
 	@include('back.partials.style')
-	
+
 </head>
 <body>
 
@@ -27,7 +27,7 @@
 			<div></div>
 		</div>
     </div>
-    
+
     <!--**********************************
         Main wrapper start
     ***********************************-->
@@ -35,7 +35,7 @@
         @include('back.partials.navheader')
         @include('back.partials.header')
         @include('back.partials.sidebar')
-		
+
 		<!--**********************************
             Content body start
         ***********************************-->
@@ -47,11 +47,11 @@
         </div>
         <!--**********************************
             Content body end
-        ***********************************-->	
+        ***********************************-->
         @include('back.partials.footer')
 	</div>
         @include('back.partials.script')
-	
-    
+
+
 </body>
 </html>

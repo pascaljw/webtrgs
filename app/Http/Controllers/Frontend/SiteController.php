@@ -26,6 +26,7 @@ use App\Models\Scholarship;
 use App\Models\Slider;
 use App\Models\Hero;
 use App\Models\Team;
+use App\Models\TentangKami;
 use Illuminate\Http\Request;
 
 class SiteController extends Controller
@@ -36,12 +37,15 @@ class SiteController extends Controller
         // $cat_id = Category::where('slug', 'pengumuman')->first();
         // $sliders = Slider::orderBy('created_at', 'desc')->get();
         $hero = Hero::all();
-        $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get();
+        $blogs = Blog::orderBy('created_at', 'desc')->paginate(10);
         $dosens = Team::all();
         $contact = Contact::first();
         $story = Program::all();
+        $tentang = TentangKami::all();
         $akreditasi = Program::whereNotNull('acreditation')->first();
-        return view('frontend.index', compact('hero','story','contact','dosens','akreditasi','blogs'));
+
+
+        return view('frontend.index', compact('hero','story','contact','dosens','akreditasi','blogs','tentang'));
     }
 
     public function visi_misi()
@@ -168,7 +172,7 @@ class SiteController extends Controller
 
     public function announcement()
     {
-        $announcements = Announcement::orderBy('created_at', 'desc')->paginate(5);
+        $announcements = Announcement::orderBy('created_at', 'desc')->paginate(1);
         return view('frontend.pengumuman.index', compact('announcements'));
     }
 

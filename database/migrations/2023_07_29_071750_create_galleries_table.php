@@ -12,14 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('galleries', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
             $table->string('name');
             $table->text('description')->nullable();
             $table->string('image');
-            $table->unsignedBigInteger('filter_id');
+            // $table->unsignedBigInteger('filter_id');
             $table->timestamps();
 
-            $table->foreign('filter_id')->references('id')->on('filters')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignUuid('filter_id')->references('id')->on('filters')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

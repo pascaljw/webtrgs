@@ -4,10 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use App\Http\Traits\UsesUuid;
 class Slider extends Model
 {
-    use HasFactory;
+    use HasFactory, UsesUuid;
 
     protected $guarded = [];
 

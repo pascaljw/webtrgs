@@ -17,7 +17,14 @@
                     <li><a href="{{ route('hero') }}">Image Frontend</a></li>
                 </ul>
             </li>
-            
+
+            <li>
+                <a href="{{ route('admin.tentang.index') }}" aria-expanded="false">
+                <i class="flaticon-046"></i>
+                    <span class="nav-text">Tentang Kami </i></span>
+                </a>
+            </li>
+
             <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                 <i class="flaticon-021-command"></i>
                 <span class="nav-text">Profile</span>
@@ -27,11 +34,11 @@
                     <li><a href="{{ route('vision') }}">visi misi</a></li>
                     <li><a href="{{ route('structure') }}">struktur</a></li>
                     <li><a href="{{ route('team') }}">Data Dosen Dan PLP&Admin</a></li>
-                    <li><a href="{{ route('partner') }}">partner</a></li>
+                    {{-- <li><a href="{{ route('partner') }}">partner</a></li> --}}
                     <li><a href="{{ route('acreditation') }}">Akreditasi</a></li>
                 </ul>
             </li>
-            <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
+            {{-- <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                 <i class="flaticon-043-menu"></i>
                 <span class="nav-text">Akademik</span>
                 </a>
@@ -45,7 +52,7 @@
                     <li><a href="{{ route('leave') }}">Cuti Akademik</a></li>
                     <li><a href="{{ route('repository') }}">Panduan Upload Repository</a></li>
                 </ul>
-            </li>
+            </li> --}}
             <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                 <i class="flaticon-036-floppy-disk"></i>
                 <span class="nav-text">Repository Skripsi</span>
@@ -54,14 +61,14 @@
                     <li><a href="{{ route('theses') }}">Lihat Repository</a></li>
                 </ul>
             </li>
-            <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
+            {{-- <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                 <i class="flaticon-064-pin"></i>
                 <span class="nav-text">Riset & Pengabdian</span>
                 </a>
                 <ul aria-expanded="false">
                     <li><a href="{{ route('research') }}">Lihat Riset dan Pengabdian</a></li>
                 </ul>
-            </li>
+            </li> --}}
             <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                 <i class="flaticon-040-graph"></i>
                 <span class="nav-text">Unit Pendukung</span>
@@ -69,7 +76,7 @@
                 <ul aria-expanded="false">
                     <li><a href="{{ route('filter') }}">Filter Galeri</a></li>
                     <li><a href="{{ route('gallery') }}">Galeri Laboratorium</a></li>
-                    <li><a href="{{ route('organization') }}">Organisasi Mahasiswa</a></li>
+                    {{-- <li><a href="{{ route('organization') }}">Organisasi Mahasiswa</a></li> --}}
                 </ul>
             </li>
             <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
@@ -97,7 +104,7 @@
                     <li><a href="{{ route('contact') }}">Kontak Prodi</a></li>
                 </ul>
             </li>
-            <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
+            {{-- <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                 <i class="flaticon-073-question"></i>
                 <span class="nav-text">Tautan Cepat</span>
                 </a>
@@ -105,7 +112,7 @@
                     <li><a href="{{ route('faq') }}">F.A.Q</a></li>
                     <li><a href="{{ route('scholarship')}}">Beasiswa</a></li>
                 </ul>
-            </li>
+            </li> --}}
             <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                 <i class="flaticon-066-plus"></i>
                 <span class="nav-text">User</span>
@@ -115,7 +122,7 @@
                 </ul>
             </li>
         </li>
-        
+
         </ul>
         <div class="plus-box">
             <p class="fs-14 font-w600 mb-2">Let Jobick Managed<br>Your Resume Easily<br></p>

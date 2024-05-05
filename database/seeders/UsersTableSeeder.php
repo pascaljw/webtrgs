@@ -17,6 +17,7 @@ class UsersTableSeeder extends Seeder
             'name'    => 'Asep Nurhuda',
             'email'    => 'acep.noor@gmail.com',
             'password'    => bcrypt('asep'),
+            'rolle' => 1,
             'phone' => '085250902512'
         ]);
     }

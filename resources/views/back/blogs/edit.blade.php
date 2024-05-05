@@ -23,14 +23,18 @@
                         <div class="mb-3 col-md-6">
                             <label class="form-label">Tag</label>
                             <select name="categories[]" class="multi-select form-control" multiple="multiple">
+                                <option value="">-- Pilih --</option>
+                                @foreach ($blog->categories as $category)
+                                    <option value="{{ $category->id}}" selected>{{ $category->name }}</option>
+                                @endforeach
                                 @foreach ($categories as $category)
-                                    <option value="{{ $category->id}}" @if ($blog->categories->contains($category)) selected="selected" @endif>
-                                      {{ $category->name }} 
+                                    <option value="{{ $category->id}}" @if ($blog->categories->contains($category))  @endif>
+                                      {{ $category->name }}
                                     </option>
                                 @endforeach
                             </select>
                         </div>
-                        
+
                     </div>
                     <div class="row">
                         <div class="col-12">
@@ -38,7 +42,7 @@
                             <textarea name="content" id="summernote" cols="30" rows="10">
                                 {{ $blog->content }}
                             </textarea>
-                        </div>   
+                        </div>
                     </div>
                 </div>
             </div>
@@ -56,7 +60,7 @@
             </div>
             <div class="card-body">
                 @if($blog->images != null)
-                    @foreach (explode(' ', $blog->images) as $images) 
+                    @foreach (explode(' ', $blog->images) as $images)
                     <div class="item">
                         <img src="{{ asset('storage/'.$images) }}" class="img-fluid">
                     </div>

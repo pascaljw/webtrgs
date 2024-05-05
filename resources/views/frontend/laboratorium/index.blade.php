@@ -23,6 +23,7 @@
 
             <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
                 @foreach ($gallerys as $gallery)
+                @for($i = 0; $i < 10; $i++)
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-{{ $gallery->filter->name }}">
 
                     <img src="{{ asset('storage/'.$gallery->image) }}" class="img-fluid" alt="">
@@ -34,6 +35,8 @@
                                 class="bi bi-zoom-in"></i></a>
                     </div>
                 </div><!-- End Portfolio Item -->
+                @endfor
+
                 @endforeach
 
             </div><!-- End Portfolio Container -->

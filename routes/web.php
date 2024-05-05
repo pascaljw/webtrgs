@@ -66,33 +66,33 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/team/{id}/edit', [App\Http\Controllers\Backend\TeamController::class, 'edit'])->name('team.edit');
     Route::get('/admin/team/{id}/delete', [App\Http\Controllers\Backend\TeamController::class, 'delete'])->name('team.delete');
 
-    Route::get('/admin/document', [App\Http\Controllers\Backend\DocumentController::class, 'index'])->name('document');
-    Route::get('/admin/document/data', [App\Http\Controllers\Backend\DocumentController::class, 'datatable'])->name('document.data');
-    Route::get('/admin/document/create', [App\Http\Controllers\Backend\DocumentController::class, 'create'])->name('document.create');
-    Route::post('/admin/document/store', [App\Http\Controllers\Backend\DocumentController::class, 'store'])->name('document.store');
-    Route::put('/admin/document/{id}/update', [App\Http\Controllers\Backend\DocumentController::class, 'update'])->name('document.update');
-    Route::get('/admin/document/{id}/edit', [App\Http\Controllers\Backend\DocumentController::class, 'edit'])->name('document.edit');
-    Route::get('/admin/document/{id}/delete', [App\Http\Controllers\Backend\DocumentController::class, 'delete'])->name('document.delete');
+    // Route::get('/admin/document', [App\Http\Controllers\Backend\DocumentController::class, 'index'])->name('document');
+    // Route::get('/admin/document/data', [App\Http\Controllers\Backend\DocumentController::class, 'datatable'])->name('document.data');
+    // Route::get('/admin/document/create', [App\Http\Controllers\Backend\DocumentController::class, 'create'])->name('document.create');
+    // Route::post('/admin/document/store', [App\Http\Controllers\Backend\DocumentController::class, 'store'])->name('document.store');
+    // Route::put('/admin/document/{id}/update', [App\Http\Controllers\Backend\DocumentController::class, 'update'])->name('document.update');
+    // Route::get('/admin/document/{id}/edit', [App\Http\Controllers\Backend\DocumentController::class, 'edit'])->name('document.edit');
+    // Route::get('/admin/document/{id}/delete', [App\Http\Controllers\Backend\DocumentController::class, 'delete'])->name('document.delete');
 
-    Route::get('/admin/job', [App\Http\Controllers\Backend\JobController::class, 'index'])->name('job');
-    Route::get('/admin/job/create', [App\Http\Controllers\Backend\JobController::class, 'create'])->name('job.create');
-    Route::post('/admin/job/store', [App\Http\Controllers\Backend\JobController::class, 'store'])->name('job.store');
-    Route::put('/admin/job/{id}/update', [App\Http\Controllers\Backend\JobController::class, 'update'])->name('job.update');
+    // Route::get('/admin/job', [App\Http\Controllers\Backend\JobController::class, 'index'])->name('job');
+    // Route::get('/admin/job/create', [App\Http\Controllers\Backend\JobController::class, 'create'])->name('job.create');
+    // Route::post('/admin/job/store', [App\Http\Controllers\Backend\JobController::class, 'store'])->name('job.store');
+    // Route::put('/admin/job/{id}/update', [App\Http\Controllers\Backend\JobController::class, 'update'])->name('job.update');
 
-    Route::get('/admin/graduation', [App\Http\Controllers\Backend\GraduationController::class, 'index'])->name('graduation');
-    Route::get('/admin/graduation/create', [App\Http\Controllers\Backend\GraduationController::class, 'create'])->name('graduation.create');
-    Route::post('/admin/graduation/store', [App\Http\Controllers\Backend\GraduationController::class, 'store'])->name('graduation.store');
-    Route::put('/admin/graduation/{id}/update', [App\Http\Controllers\Backend\GraduationController::class, 'update'])->name('graduation.update');
+    // Route::get('/admin/graduation', [App\Http\Controllers\Backend\GraduationController::class, 'index'])->name('graduation');
+    // Route::get('/admin/graduation/create', [App\Http\Controllers\Backend\GraduationController::class, 'create'])->name('graduation.create');
+    // Route::post('/admin/graduation/store', [App\Http\Controllers\Backend\GraduationController::class, 'store'])->name('graduation.store');
+    // Route::put('/admin/graduation/{id}/update', [App\Http\Controllers\Backend\GraduationController::class, 'update'])->name('graduation.update');
 
-    Route::get('/admin/leave', [App\Http\Controllers\Backend\LeaveController::class, 'index'])->name('leave');
-    Route::get('/admin/leave/create', [App\Http\Controllers\Backend\LeaveController::class, 'create'])->name('leave.create');
-    Route::post('/admin/leave/store', [App\Http\Controllers\Backend\LeaveController::class, 'store'])->name('leave.store');
-    Route::put('/admin/leave/{id}/update', [App\Http\Controllers\Backend\LeaveController::class, 'update'])->name('leave.update');
+    // Route::get('/admin/leave', [App\Http\Controllers\Backend\LeaveController::class, 'index'])->name('leave');
+    // Route::get('/admin/leave/create', [App\Http\Controllers\Backend\LeaveController::class, 'create'])->name('leave.create');
+    // Route::post('/admin/leave/store', [App\Http\Controllers\Backend\LeaveController::class, 'store'])->name('leave.store');
+    // Route::put('/admin/leave/{id}/update', [App\Http\Controllers\Backend\LeaveController::class, 'update'])->name('leave.update');
 
-    Route::get('/admin/repository', [App\Http\Controllers\Backend\RepositoryController::class, 'index'])->name('repository');
-    Route::get('/admin/repository/create', [App\Http\Controllers\Backend\RepositoryController::class, 'create'])->name('repository.create');
-    Route::post('/admin/repository/store', [App\Http\Controllers\Backend\RepositoryController::class, 'store'])->name('repository.store');
-    Route::put('/admin/repository/{id}/update', [App\Http\Controllers\Backend\RepositoryController::class, 'update'])->name('repository.update');
+    // Route::get('/admin/repository', [App\Http\Controllers\Backend\RepositoryController::class, 'index'])->name('repository');
+    // Route::get('/admin/repository/create', [App\Http\Controllers\Backend\RepositoryController::class, 'create'])->name('repository.create');
+    // Route::post('/admin/repository/store', [App\Http\Controllers\Backend\RepositoryController::class, 'store'])->name('repository.store');
+    // Route::put('/admin/repository/{id}/update', [App\Http\Controllers\Backend\RepositoryController::class, 'update'])->name('repository.update');
 
     Route::get('/admin/research', [App\Http\Controllers\Backend\ResearchController::class, 'index'])->name('research');
     Route::get('/admin/research/create', [App\Http\Controllers\Backend\ResearchController::class, 'create'])->name('research.create');
@@ -109,15 +109,15 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/admin/scholarship/store', [App\Http\Controllers\Backend\ScholarshipController::class, 'store'])->name('scholarship.store');
     Route::put('/admin/scholarship/{id}/update', [App\Http\Controllers\Backend\ScholarshipController::class, 'update'])->name('scholarship.update');
 
-    Route::get('/admin/tuition', [App\Http\Controllers\Backend\TuitionController::class, 'index'])->name('tuition');
-    Route::get('/admin/tuition/create', [App\Http\Controllers\Backend\TuitionController::class, 'create'])->name('tuition.create');
-    Route::post('/admin/tuition/store', [App\Http\Controllers\Backend\TuitionController::class, 'store'])->name('tuition.store');
-    Route::put('/admin/tuition/{id}/update', [App\Http\Controllers\Backend\TuitionController::class, 'update'])->name('tuition.update');
+    // Route::get('/admin/tuition', [App\Http\Controllers\Backend\TuitionController::class, 'index'])->name('tuition');
+    // Route::get('/admin/tuition/create', [App\Http\Controllers\Backend\TuitionController::class, 'create'])->name('tuition.create');
+    // Route::post('/admin/tuition/store', [App\Http\Controllers\Backend\TuitionController::class, 'store'])->name('tuition.store');
+    // Route::put('/admin/tuition/{id}/update', [App\Http\Controllers\Backend\TuitionController::class, 'update'])->name('tuition.update');
 
-    Route::get('/admin/service', [App\Http\Controllers\Backend\ServiceController::class, 'index'])->name('service');
-    Route::get('/admin/service/create', [App\Http\Controllers\Backend\ServiceController::class, 'create'])->name('service.create');
-    Route::post('/admin/service/store', [App\Http\Controllers\Backend\ServiceController::class, 'store'])->name('service.store');
-    Route::put('/admin/service/{id}/update', [App\Http\Controllers\Backend\ServiceController::class, 'update'])->name('service.update');
+    // Route::get('/admin/service', [App\Http\Controllers\Backend\ServiceController::class, 'index'])->name('service');
+    // Route::get('/admin/service/create', [App\Http\Controllers\Backend\ServiceController::class, 'create'])->name('service.create');
+    // Route::post('/admin/service/store', [App\Http\Controllers\Backend\ServiceController::class, 'store'])->name('service.store');
+    // Route::put('/admin/service/{id}/update', [App\Http\Controllers\Backend\ServiceController::class, 'update'])->name('service.update');
 
     Route::get('/admin/faq', [App\Http\Controllers\Backend\FaqController::class, 'index'])->name('faq');
     Route::get('/admin/faq/data', [App\Http\Controllers\Backend\FaqController::class, 'datatable'])->name('faq.data');
@@ -155,14 +155,14 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/slider/{id}/edit', [App\Http\Controllers\Backend\SliderController::class, 'edit'])->name('slider.edit');
     Route::get('/admin/slider/{id}/delete', [App\Http\Controllers\Backend\SliderController::class, 'delete'])->name('slider.delete');
 
-    Route::get('/admin/curriculum', [App\Http\Controllers\Backend\CurriculumController::class, 'index'])->name('curriculum');
-    Route::get('/admin/curriculum/data', [App\Http\Controllers\Backend\CurriculumController::class, 'datatable'])->name('curriculum.data');
-    Route::get('/admin/curriculum/create', [App\Http\Controllers\Backend\CurriculumController::class, 'create'])->name('curriculum.create');
-    Route::post('/admin/curriculum/store', [App\Http\Controllers\Backend\CurriculumController::class, 'store'])->name('curriculum.store');
-    Route::post('/admin/curriculum/import', [App\Http\Controllers\Backend\CurriculumController::class, 'import'])->name('curriculum.import');
-    Route::put('/admin/curriculum/{id}/update', [App\Http\Controllers\Backend\CurriculumController::class, 'update'])->name('curriculum.update');
-    Route::get('/admin/curriculum/{id}/edit', [App\Http\Controllers\Backend\CurriculumController::class, 'edit'])->name('curriculum.edit');
-    Route::get('/admin/curriculum/{id}/delete', [App\Http\Controllers\Backend\CurriculumController::class, 'delete'])->name('curriculum.delete');
+    // Route::get('/admin/curriculum', [App\Http\Controllers\Backend\CurriculumController::class, 'index'])->name('curriculum');
+    // Route::get('/admin/curriculum/data', [App\Http\Controllers\Backend\CurriculumController::class, 'datatable'])->name('curriculum.data');
+    // Route::get('/admin/curriculum/create', [App\Http\Controllers\Backend\CurriculumController::class, 'create'])->name('curriculum.create');
+    // Route::post('/admin/curriculum/store', [App\Http\Controllers\Backend\CurriculumController::class, 'store'])->name('curriculum.store');
+    // Route::post('/admin/curriculum/import', [App\Http\Controllers\Backend\CurriculumController::class, 'import'])->name('curriculum.import');
+    // Route::put('/admin/curriculum/{id}/update', [App\Http\Controllers\Backend\CurriculumController::class, 'update'])->name('curriculum.update');
+    // Route::get('/admin/curriculum/{id}/edit', [App\Http\Controllers\Backend\CurriculumController::class, 'edit'])->name('curriculum.edit');
+    // Route::get('/admin/curriculum/{id}/delete', [App\Http\Controllers\Backend\CurriculumController::class, 'delete'])->name('curriculum.delete');
 
     Route::get('/admin/filter', [App\Http\Controllers\Backend\FilterController::class, 'index'])->name('filter');
     Route::post('/admin/filter/store', [App\Http\Controllers\Backend\FilterController::class, 'store'])->name('filter.store');
@@ -179,13 +179,16 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/gallery/{id}/edit', [App\Http\Controllers\Backend\GalleryController::class, 'edit'])->name('gallery.edit');
     Route::put('/admin/gallery/{id}/update', [App\Http\Controllers\Backend\GalleryController::class, 'update'])->name('gallery.update');
 
-    Route::get('/admin/partner', [App\Http\Controllers\Backend\PartnerController::class, 'index'])->name('partner');
-    Route::get('/admin/partner/create', [App\Http\Controllers\Backend\PartnerController::class, 'create'])->name('partner.create');
-    Route::post('/admin/partner/store', [App\Http\Controllers\Backend\PartnerController::class, 'store'])->name('partner.store');
-    Route::get('/admin/partner/data', [App\Http\Controllers\Backend\PartnerController::class, 'datatable'])->name('partner.data');
-    Route::get('/admin/partner/{id}/delete', [App\Http\Controllers\Backend\PartnerController::class, 'delete'])->name('partner.delete');
-    Route::get('/admin/partner/{id}/edit', [App\Http\Controllers\Backend\PartnerController::class, 'edit'])->name('partner.edit');
-    Route::put('/admin/partner/{id}/update', [App\Http\Controllers\Backend\PartnerController::class, 'update'])->name('partner.update');
+    // Route::get('/admin/partner', [App\Http\Controllers\Backend\PartnerController::class, 'index'])->name('partner');
+    // Route::get('/admin/partner/create', [App\Http\Controllers\Backend\PartnerController::class, 'create'])->name('partner.create');
+    // Route::post('/admin/partner/store', [App\Http\Controllers\Backend\PartnerController::class, 'store'])->name('partner.store');
+    // Route::get('/admin/partner/data', [App\Http\Controllers\Backend\PartnerController::class, 'datatable'])->name('partner.data');
+    // Route::get('/admin/partner/{id}/delete', [App\Http\Controllers\Backend\PartnerController::class, 'delete'])->name('partner.delete');
+    // Route::get('/admin/partner/{id}/edit', [App\Http\Controllers\Backend\PartnerController::class, 'edit'])->name('partner.edit');
+    // Route::put('/admin/partner/{id}/update', [App\Http\Controllers\Backend\PartnerController::class, 'update'])->name('partner.update');
+
+    // Tentang Kami //
+    Route::resource('/admin/tentang', App\Http\Controllers\Backend\TentangKamiController::class, ['names' => 'admin.tentang']);
 
     Route::get('/admin/theses', [App\Http\Controllers\Backend\ThesesController::class, 'index'])->name('theses');
     Route::get('/admin/theses/create', [App\Http\Controllers\Backend\ThesesController::class, 'create'])->name('theses.create');

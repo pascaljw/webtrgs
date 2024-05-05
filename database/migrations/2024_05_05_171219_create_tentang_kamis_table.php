@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('curricula', function (Blueprint $table) {
+        Schema::create('tentang_kamis', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('code');
-            $table->string('name');
-            $table->integer('credit');
-            $table->string('practice');
-            $table->string('semester');
+            $table->string('title');
+            $table->text('body');
+            $table->string('slug');
             $table->timestamps();
         });
     }
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('curricula');
+        Schema::dropIfExists('tentang_kamis');
     }
 };

@@ -36,15 +36,17 @@ class TeamController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name'          => 'required',
-            'nip'          => 'required',
-            'image'         => 'required',
-            'description'     => 'required'
+            'name'      => 'required',
+            'nip'      => 'required',
+            'description' => 'required',
+            'position'  => 'required',
         ]);
 
         $image = null;
         if ($request->hasFile('image')) {
             $image = $request->file('image')->store('images');
+        }else {
+            $image = 'default.jpg';
         }
         Team::create([
             'name' => $request->name,
