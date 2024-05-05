@@ -37,12 +37,22 @@
                                 <input type="password" name="password2" id="password2" class="form-control" onkeyup='check();'>
                                 <span id='message'></span>
                             </div>
-                            
+
+                            <div class="mb-3 col-12">
+                                <label class="form-label">Role</label>
+                                <select name="rolle" id="" class="form-control">
+                                    <option selected disabled>Pilih Role</option>
+                                    <option value="0">User</option>
+                                    <option value="1">Admin</option>
+                                </select>
+
+                            </div>
+
                             <div class="mb-3 col-12">
                                 <label class="form-label">No HP</label>
                                 <input type="text" name="phone" class="form-control" placeholder="081388889999">
                             </div>
-                            
+
                         </div>
                 </div>
                 <div class="card-footer">
@@ -70,7 +80,6 @@ var check = function() {
       document.getElementById('message').innerHTML = 'password not matching';
     }
   }
-</script> 
+</script>
 @endpush
 
-    

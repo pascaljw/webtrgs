@@ -34,6 +34,7 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required',
             'password' => 'required',
+            'rolle' => 'required',
         ]);
 
         if ($request->password != $request->password2) {
@@ -44,6 +45,7 @@ class UserController extends Controller
             'name' => $request->name,
             'password' => bcrypt($request->password),
             'email' => $request->email,
+            'rolle' => $request->rolle,
             'phone' => $request->phone,
         ]);
 
@@ -57,6 +59,7 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required',
+            'roll' => 'required',
         ]);
 
         $user = User::find($id);
@@ -73,6 +76,7 @@ class UserController extends Controller
             'name' => $request->name,
             'password' => $password,
             'email' => $request->email,
+            'rolle' => $request->rolle,
             'phone' => $request->phone
         ]);
 
