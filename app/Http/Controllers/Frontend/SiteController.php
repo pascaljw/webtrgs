@@ -91,8 +91,9 @@ class SiteController extends Controller
 
     public function contact()
     {
+
         $contact = Contact::first();
-        return view('front.contact', compact('contact'));
+        return view('frontend.contact', compact('contact'));
     }
 
     public function teamsLecturer()
