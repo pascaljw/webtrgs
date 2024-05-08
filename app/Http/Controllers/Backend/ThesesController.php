@@ -22,7 +22,7 @@ class ThesesController extends Controller
     {
         $request->validate([
             'name'  => 'required|min:3',
-            'nim'   => 'required|numeric',
+            'nim'   => 'required',
             'title' => 'required',
             'year'  => 'required',
         ]);
@@ -53,7 +53,7 @@ class ThesesController extends Controller
 
     public function edit($id)
     {
-        
+
         $theses = Thesis::find($id);
         return view('back.theses.edit',compact('theses'));
 
@@ -72,7 +72,7 @@ class ThesesController extends Controller
         $theses->update($request->all());
 
         return redirect()->route('theses');
-        
+
 
 
     }

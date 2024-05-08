@@ -1,5 +1,9 @@
 @extends('frontend.partials.content')
 
+
+@push('css_user')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+@endpush
 @section('content')
 @include('frontend.partials.hero')
 
@@ -87,7 +91,7 @@
 
                         <div class="post-meta">
                             <p class="post-date">
-                                <time datetime="2022-01-01">Jan 1, 2022</time>
+                                <p>{{ $an->created_at->diffForHumans() }}</p>
                             </p>
                         </div>
                     </div>
@@ -232,4 +236,8 @@
         </div>
     </div>
 </section><!-- End Contact Section -->
+@push('js_user')
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+@endpush
 @endsection

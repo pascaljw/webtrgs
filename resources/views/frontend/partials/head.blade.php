@@ -23,11 +23,4 @@
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('frontend/assets/css/main.css') }}" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Append
-  * Updated: Feb 01 2024 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+@stack('css_user')
