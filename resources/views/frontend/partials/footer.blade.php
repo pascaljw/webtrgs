@@ -38,7 +38,7 @@
   </div>
 
   <div class="container copyright text-center mt-4">
-    <p>&copy; <span>Copyright</span> <strong class="px-1">Append</strong> <span>All Rights Reserved</span></p>
+    <p>&copy; <span>Copyright</span> <strong class="px-1">Kelompok PBL Website TRPL 2024</strong> <span>All Rights Reserved</span></p>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
       <!-- You can delete the links only if you've purchased the pro version. -->

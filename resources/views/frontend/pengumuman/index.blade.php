@@ -6,7 +6,7 @@
 <section id="blog" class="blog mt-5">
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h1 class="text-center mb-5">Berita</h1>
+        <h1 class="text-center mb-5">Pengumuman</h1>
         <div class="row gy-4 posts-list">
             @foreach($announcements as $an)
             <div class="col-xl-4 col-lg-6">
