@@ -162,7 +162,7 @@
     <!--  Section Title -->
     <div class="container section-title" data-aos="fade-up">
         <h2>Akreditasi</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        {{-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> --}}
     </div><!-- End Section Title -->
 
     <div class="container justify-content-center align-items-center">
@@ -183,7 +183,7 @@
     <!--  Section Title -->
     <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        {{-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> --}}
     </div><!-- End Section Title -->
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -221,9 +221,9 @@
                     <div class="col-md-6">
                         <div class="info-item" data-aos="fade" data-aos-delay="500">
                             <i class="bi bi-clock"></i>
-                            <h3>Open Hours</h3>
-                            <p>Monday - Friday</p>
-                            <p>9:00AM - 05:00PM</p>
+                            <h3>Buka Jam</h3>
+                            <p>Senin - Jumat</p>
+                            <p>9:00AM - 03:00PM</p>
                         </div>
                     </div><!-- End Info Item -->
 
