@@ -20,8 +20,8 @@
                 <div class="swiper-slide">
                     <img src="{{ url('storage/'.$hero->image)  }}" alt="" class="hero-img ">
                     <div class="img-bg-inner">
-                        <h2>{{ $hero->judul }}</h2>
-                        <p>{{ Str::substr($hero->desc, 0, 40) }}</p>
+                        <h2>{{ $hero->title }}</h2>
+                        <p>{{ Str::substr($hero->detail, 0, 40) }}</p>
                     </div>
                 </div>
                 @endforeach
