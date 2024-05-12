@@ -13,12 +13,12 @@
 @section('content')
 
 <section id="hero" class="hero mt-5">
-    <div class="container-md">
+    <div class="container-md" style="z-index: 99;">
         <div class="swiper slider-post" style="border-radius: 15px;">
             <div class="swiper-wrapper">
                 @foreach ($heros as $hero)
                 <div class="swiper-slide">
-                    <img src="{{ url('storage/'.$hero->image)  }}" alt="" class="hero-img ">
+                    <img src="{{ url('storage/'.$hero->image)  }}" alt="" class="hero-img">
                     <div class="img-bg-inner">
                         <h2>{{ $hero->title }}</h2>
                         <p>{{ Str::substr($hero->detail, 0, 40) }}</p>
@@ -152,13 +152,12 @@
     <div class="container">
         <div class="row gy-5">
             @foreach ($dosens as $dosen)
-            <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="member-img">
+            <div class="col-lg-4 col-md-6 member" style="display: flex; flex-direction: column; align-items: center;" data-aos="fade-up" data-aos-delay="100">
+                <div class="member-img" style="width:200px; height:200px;">
                     @if($dosen->image == 'default.jpg')
                     <img src="{{ asset('backend/img/default.jpg') }}" class="img-fluid" alt="">
                     @else
-                    <img src="{{ asset('storage/' . $dosen->image) }}" class="img-fluid" alt="">
+                    <img src="{{ asset('storage/' . $dosen->image) }}" class="img-fluid" alt="" style="background-position: center; background-size: cover;">
                     @endif
                     <div class="social">
                         <a href="#"><i class="bi bi-twitter"></i></a>
