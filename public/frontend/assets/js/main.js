@@ -1,10 +1,4 @@
-/**
-* Template Name: Append
-* Updated: Feb 01 2024 with Bootstrap v5.3.2
-* Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
@@ -45,10 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
-    const selectHeader = document.querySelector('#header');
+    const selectHeader = document.querySelector('#header-content');
     if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
     window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
   }
+
 
   document.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
@@ -58,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   let lastScrollTop = 0;
   window.addEventListener('scroll', function() {
-    const selectHeader = document.querySelector('#header');
+    const selectHeader = document.querySelector('#header-content');
     if (!selectHeader.classList.contains('scroll-up-sticky')) return;
 
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -189,13 +184,13 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Init swiper sliders
    */
-  function initSwiper() {
-    document.querySelectorAll('.swiper').forEach(function(swiper) {
-      let config = JSON.parse(swiper.querySelector('.swiper-config').innerHTML.trim());
-      new Swiper(swiper, config);
-    });
-  }
-  window.addEventListener('load', initSwiper);
+//   function initSwiper() {
+//     document.querySelectorAll('.swiper').forEach(function(swiper) {
+//       let config = JSON.parse(swiper.querySelector('.swiper-config').innerHTML.trim());
+//       new Swiper(swiper, config);
+//     });
+//   }
+//   window.addEventListener('load', initSwiper);
 
   /**
    * Animation on scroll function and init

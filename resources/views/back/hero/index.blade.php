@@ -13,7 +13,7 @@
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table id="dataTable" class="display" style="width:100%">
+            <table id="dataTable" class="display table" style="width:100%; height: auto;">
                 <thead>
                     <tr>
                         <th>No</th>
@@ -24,13 +24,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($heros as $hero)    
+                    @foreach($heros as $hero)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $hero->title }}</td>
                             <td>{{ $hero->detail }}</td>
-                            <td>{{ $hero->getImage() }}</td>
-                            <td>Hapus</td>
+                            <td><a href="{{ asset('storage/'.$hero->image) }}" target="__blank" class="btn btn-success"><i class="bi bi-eye"></i></a></td>
+
+                            <td><a href="{{ route('hero.delete', $hero->id) }}" class="btn btn-primary"><i class="bi bi-trash"></i></a></td>
                         </tr>
                     @endforeach
                 </tbody>

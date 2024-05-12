@@ -815,18 +815,18 @@ section,
 .hero {
   --default-color: #ffffff;
   --default-color-rgb: 255, 255, 255;
-  --background-color: #000000;
+
   --background-color-rgb: 0, 0, 0;
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 160px 0 80px 0;
+  padding: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.hero img {
+.hero .hero-img {
   position: absolute;
   inset: 0;
   display: block;

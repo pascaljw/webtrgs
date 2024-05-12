@@ -1,16 +1,17 @@
-
-
-<section id="hero" class="hero mt-5" >
+@push('css_user')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+@endpush
+<section id="hero" class="hero mt-5">
     <div class="col-md-12">
         <div class="swiper sliderFeaturedPosts" style="border-radius: 15px;">
             <div class="swiper-wrapper">
-                @foreach ($hero as $h)
+                @foreach ($heros as $berita)
                 <div class="swiper-slide">
-                        <a href="" class="img-bg d-flex align-items-end"
-                            style="background-image: url({{ asset('storage/'.$h->image)}} }); border-radius: 10px;">
+                        <a  class="img-bg d-flex align-items-end"
+                            style="background-image: url({{ url("storage/".$berita->image)  }}); border-radius: 10px;">
                         <div class="img-bg-inner">
-                            <h2>{{ $h->judul }}</h2>
-                            <p>{{ Str::substr($h->desc, 0, 40) }}</p>
+                            <h2>{{ $berita->judul }}</h2>
+                            <p>{{ Str::substr($berita->desc, 0, 40) }}</p>
                         </div>
                     </a>
                 </div>
@@ -24,32 +25,14 @@
             </div>
             <div class="swiper-pagination"></div>
         </div>
-</div>
+    </div>
+</section><!-- End Hero Section -->
+@push('js_user')
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  {{-- <img src="{{ asset('storage/'.$h->image)}}" alt="" data-aos="fade-in"> --}}
-
-    {{-- <div class="container">
-      <div class="row">
-        <div class="col-lg-10">
-          <h2 data-aos="fade-up" data-aos-delay="100">Teknologi Rekayasa Geomatika dan Survei</h2>
-          <p data-aos="fade-up" data-aos-delay="200">We are team of talented designers making websites with Bootstrap</p>
-        </div>
-        <div class="col-lg-5">
-          <form action="#" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="300">
-            <input type="text" class="form-control" placeholder="Enter email address">
-            <input type="submit" class="btn btn-primary" value="Sign up">
-          </form>
-        </div>
-      </div>
-    </div> --}}
-
-  </section><!-- End Hero Section -->
-
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script>
-    var swiper = new Swiper(".swiper", {
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
+
 </script>
+@endpush

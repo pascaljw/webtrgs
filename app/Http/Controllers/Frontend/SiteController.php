@@ -36,7 +36,8 @@ class SiteController extends Controller
     {
         // $cat_id = Category::where('slug', 'pengumuman')->first();
         // $sliders = Slider::orderBy('created_at', 'desc')->get();
-        $hero = Hero::all();
+        $heros = Hero::all();
+
         $blogs = Blog::orderBy('created_at', 'desc')->paginate(10);
         $dosens = Team::all();
         $contact = Contact::first();
@@ -45,7 +46,7 @@ class SiteController extends Controller
         $akreditasi = Program::whereNotNull('acreditation')->first();
 
 
-        return view('frontend.index', compact('hero','story','contact','dosens','akreditasi','blogs','tentang'));
+        return view('frontend.index', compact('heros','story','contact','dosens','akreditasi','blogs','tentang'));
     }
 
     public function visi_misi()

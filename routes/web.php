@@ -200,6 +200,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/hero', [App\Http\Controllers\Backend\HeroController::class, 'index'])->name('hero');
     Route::get('/admin/hero/create', [App\Http\Controllers\Backend\HeroController::class, 'create'])->name('hero.create');
     Route::post('/admin/hero/store', [App\Http\Controllers\Backend\HeroController::class, 'store'])->name('hero.store');
+    Route::post('/admin/hero/delete/{id}', [App\Http\Controllers\Backend\HeroController::class, 'destroy'])->name('hero.delete');
+
 });
 
 Route::get('/', [SiteController::class, 'index'])->name('site.beranda');
