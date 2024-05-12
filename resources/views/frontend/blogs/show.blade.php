@@ -1,10 +1,12 @@
 @extends('frontend.partials.content')
 
 @section('content')
-<section id="blog-details" class="blog-details">
+<section id="blog-details" class="blog-details" style="margin: 50px;">
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
-
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <h1 class="text-center mb-6">Berita</h1>
+            <div class="row gy-4 posts-list">
         <div class="row g-5">
 
             <div class="col-lg-12">
@@ -203,7 +205,7 @@
 
 
         </div>
-
+            </div>
     </div>
 
 </section>

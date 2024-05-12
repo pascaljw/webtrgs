@@ -4,6 +4,7 @@
 <section id="blog-details" class="blog-details">
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
+        
 
         <div class="row g-5">
 

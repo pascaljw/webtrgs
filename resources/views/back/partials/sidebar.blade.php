@@ -30,7 +30,7 @@
                 <span class="nav-text">Profile</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="{{ route('story') }}">cerita</a></li>
+                    <li><a href="{{ route('story') }}">cerita X</a></li>
                     <li><a href="{{ route('vision') }}">visi misi</a></li>
                     <li><a href="{{ route('structure') }}">struktur</a></li>
                     <li><a href="{{ route('team') }}">Data Dosen Dan PLP&Admin</a></li>

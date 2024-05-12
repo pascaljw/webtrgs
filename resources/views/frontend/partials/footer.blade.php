@@ -20,26 +20,25 @@
           <li><a href="{{route('site.visi_misi')}}">Visi Misi</a></li>
           <li><a href="{{route('site.berita')}}">Berita</a></li>
           <li><a href="{{route('site.data_dosen')}}">Data Dosen PLP Admin</a></li>
-          <li><a href="{{route('contact')}}">Kontak</a></li>
-
-
+          
+          
         </ul>
       </div>
-
+      
       <div class="col-lg-2 col-6 footer-links">
         <h4>Alternatif Link</h4>
         <ul>
-            <li><a href="{{route('site.akreditasi')}}">Akreditasi</a></li>
-            <li><a href="{{route('site.berita')}}">Berita</a></li>
-            <li><a href="{{route('site.repo')}}">Repository</a></li>
-            <li><a href="{{route('site.laboratorium')}}">Unit Pendukung</a></li>
+          <li><a href="{{route('site.akreditasi')}}">Akreditasi</a></li>
+          <li><a href="{{route('site.repo')}}">Repository</a></li>
+          <li><a href="{{route('site.laboratorium')}}">Unit Pendukung</a></li>
+          <li><a href="{{route('site.contact')}}">Kontak</a></li>
         </ul>
       </div>
     </div>
   </div>
 
   <div class="container copyright text-center mt-4">
-    <p>&copy; <span>Copyright</span> <strong class="px-1">Append</strong> <span>All Rights Reserved</span></p>
+    <p>&copy; <span>Copyright</span> <strong class="px-1">Kelompok PBL Website TRPL 2024</strong> <span>All Rights Reserved</span></p>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
       <!-- You can delete the links only if you've purchased the pro version. -->
