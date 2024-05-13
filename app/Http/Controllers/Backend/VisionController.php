@@ -39,7 +39,7 @@ class VisionController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'vision' => 'required',
+            'vision' => 'required|min:10',
         ]);
         $vision = Program::find($id);
         $vision->update([

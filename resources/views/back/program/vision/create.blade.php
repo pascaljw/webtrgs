@@ -21,8 +21,11 @@
                         @csrf
                         <div class="row">
                             <div class="mb-3 col-12">
-                                <textarea name="vision" class="form-control summernote" rows="6"></textarea>
+                                <textarea name="vision" class="form-control summernote @error('vision') is-invalid  @enderror" rows="6"></textarea>
                             </div>
+                            @error('vision')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                 </div>
                 <div class="card-footer">
@@ -64,4 +67,3 @@
 </script>
 @endpush
 
-    

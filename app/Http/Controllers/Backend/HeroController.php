@@ -40,6 +40,13 @@ class HeroController extends Controller
             'image' => $image
         ]);
 
-        return redirect()->route('hero');
+        return redirect()->route('hero')->with('success', 'Berhasil Menambahkan Gambar Hero');
+    }
+
+    public function destroy($id)
+    {
+        $hero = Hero::find($id);
+        $hero->delete();
+        return redirect()->route('hero')->with('success', 'Berhasil Menghapus Gambar Hero');
     }
 }

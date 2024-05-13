@@ -127,10 +127,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/faq/{id}/edit', [App\Http\Controllers\Backend\FaqController::class, 'edit'])->name('faq.edit');
     Route::get('/admin/faq/{id}/delete', [App\Http\Controllers\Backend\FaqController::class, 'delete'])->name('faq.delete');
 
-    Route::get('/admin/story', [App\Http\Controllers\Backend\StoryController::class, 'index'])->name('story');
-    Route::get('/admin/story/create', [App\Http\Controllers\Backend\StoryController::class, 'create'])->name('story.create');
-    Route::post('/admin/story/store', [App\Http\Controllers\Backend\StoryController::class, 'store'])->name('story.store');
-    Route::put('/admin/story/{id}/update', [App\Http\Controllers\Backend\StoryController::class, 'update'])->name('story.update');
+    // Route::get('/admin/story', [App\Http\Controllers\Backend\StoryController::class, 'index'])->name('story');
+    // Route::get('/admin/story/create', [App\Http\Controllers\Backend\StoryController::class, 'create'])->name('story.create');
+    // Route::post('/admin/story/store', [App\Http\Controllers\Backend\StoryController::class, 'store'])->name('story.store');
+    // Route::put('/admin/story/{id}/update', [App\Http\Controllers\Backend\StoryController::class, 'update'])->name('story.update');
 
     Route::get('/admin/vision', [App\Http\Controllers\Backend\VisionController::class, 'index'])->name('vision');
     Route::get('/admin/vision/create', [App\Http\Controllers\Backend\VisionController::class, 'create'])->name('vision.create');
@@ -233,7 +233,7 @@ Route::get('/tuition', [App\Http\Controllers\Frontend\SiteController::class, 'tu
 Route::get('/service', [App\Http\Controllers\Frontend\SiteController::class, 'service'])->name('site.service');
 Route::get('/faq', [App\Http\Controllers\Frontend\SiteController::class, 'faq'])->name('site.faq');
 Route::get('/partners', [App\Http\Controllers\Frontend\SiteController::class, 'partner'])->name('site.partner');
-Route::get('/story', [App\Http\Controllers\Frontend\SiteController::class, 'story'])->name('site.story');
+// Route::get('/story', [App\Http\Controllers\Frontend\SiteController::class, 'story'])->name('site.story');
 Route::get('/vision', [App\Http\Controllers\Frontend\SiteController::class, 'vision'])->name('site.vision');
 Route::get('/structure', [App\Http\Controllers\Frontend\SiteController::class, 'structure'])->name('site.structure');
 Route::get('/acreditation', [App\Http\Controllers\Frontend\SiteController::class, 'acreditation'])->name('site.acreditation');

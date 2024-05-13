@@ -15,9 +15,13 @@
             <form method="post" action="{{ route('category.store') }}">
                 @csrf
                 <div class="mb-3">
-                    <input type="text" name="name" class="form-control form-control-lg" placeholder="input-new-category">
+                    <input type="text" name="name" class="form-control form-control-lg @error('name')
+                        is-invalid @enderror" placeholder="input-new-category">
                 </div>
-            
+                @error('name')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

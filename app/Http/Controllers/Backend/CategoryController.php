@@ -18,6 +18,11 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
+
+        $request->validate([
+            'name' => 'required',
+        ]);
+
         Category::create([
             'name' => $request->name,
             'slug' => Str::slug($request->name)
@@ -33,6 +38,10 @@ class CategoryController extends Controller
 
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'name' => 'required',
+        ]);
+        
         $category = Category::find($id);
         $category->update([
             'name' => $request->name,

@@ -21,7 +21,7 @@
                         @csrf
                         <div class="mb-3">
                             <label> Title</label>
-                            <input type="text" name="title" class="form-control form-control-lg 
+                            <input type="text" name="title" class="form-control form-control-lg
                             @error('title') is-invalid @enderror" value="{{ old('title') }}">
 
                             @error('title')
@@ -31,13 +31,13 @@
                         <div class="mb-3">
                             <label>Image Content Minimalist</label>
                             <input type="text" name="detail" class="form-control
-                            @error('content') is-invalid @enderror" value="{{ old('content') }}">
+                            @error('detail') is-invalid @enderror" value="{{ old('detail') }}">
 
-                            @error('content')
+                            @error('detail')
                                 <span class="invalid-feedback">{{ $message }}</span>
                             @enderror
                         </div>
-                        
+
                         <div class="mb-3 form-file">
                             <label for="">Image (<i>ukuran 1000x600 px</i>)</label>
                             {{-- <span class="input-group-text">Image <i>ukuran 1000x600 px</i></span> --}}

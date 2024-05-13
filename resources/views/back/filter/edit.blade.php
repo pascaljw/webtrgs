@@ -7,13 +7,17 @@
                     <h4 class="card-title">Edit Nama Filter</h4>
                 </div>
                 <div class="card-body">
-                    <div class="basic-form">  
+                    <div class="basic-form">
                         <form method="post" action="{{ route('filter.update', $filter->id) }}">
                             @csrf
                             @method('put')
                             <div class="mb-3">
-                                <input name="name" type="text" class="form-control form-control-lg" value="{{ $filter->name }}">
+                                <input name="name" type="text" class="form-control form-control-lg @error('name')
+                                is-invalid @enderror" value="{{ $filter->name }}">
                             </div>
+                            @error('name')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
                     <div class="card-footer">

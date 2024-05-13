@@ -22,12 +22,17 @@
                         @method('put')
                         <div class="row">
                             <div class="mb-3 col-12">
-                                <label class="form-label">Visi dan Misis</label>
-                                <textarea name="vision" class="form-control summernote" rows="10">
+                                <label class="form-label">Visi dan Misi</label>
+                                <textarea name="vision" class="form-control summernote @error('vision') is-invalid  @enderror" rows="10">
                                     {{ $vision->vision }}
                                 </textarea>
+                                @error('vision')
+                                 <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                         </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Save</button>
@@ -66,4 +71,3 @@
 </script>
 @endpush
 
-    

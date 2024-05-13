@@ -30,8 +30,15 @@
                             <td>{{ $hero->title }}</td>
                             <td>{{ $hero->detail }}</td>
                             <td><a href="{{ asset('storage/'.$hero->image) }}" target="__blank" class="btn btn-success"><i class="bi bi-eye"></i></a></td>
+                            <td>
 
-                            <td><a href="{{ route('hero.delete', $hero->id) }}" class="btn btn-primary"><i class="bi bi-trash"></i></a></td>
+                                <form action="{{ route('hero.delete', [$hero->id]) }}" method="POST" onsubmit="return confirm('Are you sure?')">
+                                    @csrf
+                                    @method('POST')
+                                    <button type="submit" class="btn btn-primary"><i class="bi bi-trash"></i></button>
+                                </form>
+                            </td>
+
                         </tr>
                     @endforeach
                 </tbody>
@@ -39,4 +46,24 @@
         </div>
     </div>
 </div>
+
+@push('script')
+<script type="text/javascript">
+    // Select all elements with the class 'confirmation'
+    var elems = document.getElementsByClassName('confirmation');
+
+    // Define a function to confirm deletion
+    var confirmIt = function (e) {
+        // If the user confirms deletion, do nothing
+        // If the user cancels deletion, prevent the default action (i.e., form submission)
+        if (!confirm('Are you sure?')) e.preventDefault();
+    };
+
+    // Attach the confirmIt function to the click event of all elements with the class 'confirmation'
+    for (var i = 0, l = elems.length; i < l; i++) {
+        elems[i].addEventListener('click', confirmIt, false);
+    }
+</script>
+
+@endpush
 @endsection
